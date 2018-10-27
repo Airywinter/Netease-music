@@ -1,0 +1,64 @@
+<template>
+  <div class="head-wrapper">
+    <div class="head-top">
+      <span class="iconfont icon1">&#xe67e;</span>
+      <input class="input iconfont" :placeholder='icon'>
+      <span class="iconfont icon2">&#xe680;</span>
+    </div>
+    <div class="head-bottom">
+      <span class="head-bottom-left">个性推荐</span>
+      <span>热门电台</span>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Home-Header',
+  data: function (){
+    return {
+      icon: '\ue64d 音乐/视频/电台/用户'
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+@import '../../../assets/styles/variables.scss';
+.head-wrapper {
+  height: 1.7rem;
+  background-color: $background-color;
+  .head-top {
+    padding: 0.1rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    text-align:center;
+    color: $font-color;
+    .icon1 {
+      float: left;
+      font-size: 0.5rem;
+    }
+    .icon2 {
+      float: right;
+      font-size: 0.5rem;
+    }
+    .input {
+      padding-left: 0.1rem;
+      min-width: 5.5rem;
+      height: 0.5rem;
+      border-radius: 5rem;
+      font-size: 0.3rem;
+    }
+  }
+  .head-bottom {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: $font-color;
+    font-size: 0.4rem;
+    .head-bottom-left {
+      margin-right: 1rem;
+    }
+  }
+}
+</style>
