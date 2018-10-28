@@ -7,7 +7,7 @@
     </div>
     <div class="head-bottom">
       <span class="head-bottom-left">个性推荐</span>
-      <span>热门电台</span>
+      <span>主播电台</span>
     </div>
   </div>
 </template>
@@ -46,6 +46,7 @@ export default {
       padding-left: 0.1rem;
       min-width: 5.5rem;
       height: 0.5rem;
+      text-align: center;
       border-radius: 5rem;
       font-size: 0.3rem;
     }
@@ -55,7 +56,7 @@ export default {
     line-height: 0.8rem;
     text-align: center;
     color: $font-color;
-    font-size: 0.4rem;
+    font-size: 0.3rem;
     .head-bottom-left {
       margin-right: 1rem;
     }
