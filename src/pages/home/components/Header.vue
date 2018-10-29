@@ -15,7 +15,7 @@
 <script>
 export default {
   name: 'Home-Header',
-  data: function (){
+  data: function () {
     return {
       icon: '\ue64d 音乐/视频/电台/用户'
     }
