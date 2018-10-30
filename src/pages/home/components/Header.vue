@@ -26,6 +26,9 @@ export default {
 <style lang="scss">
 @import '../../../assets/styles/variables.scss';
 .head-wrapper {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
   height: 1.7rem;
   background-color: $background-color;
   .head-top {

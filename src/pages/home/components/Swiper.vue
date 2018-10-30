@@ -45,6 +45,7 @@ export default {
 <style lang="scss">
 @import '../../../assets/styles/variables.scss';
   .swiper-img {
+    margin-top: 1.7rem;
     width: 100%;
   }
   .swiper-pagination-bullet {
