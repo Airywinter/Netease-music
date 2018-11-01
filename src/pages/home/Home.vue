@@ -34,7 +34,6 @@ export default {
     getHomeInfoSucc (res) {
       res = res.data
       this.recommandList = res.result
-      console.log(this.recommandList)
     }
   },
   mounted () {
