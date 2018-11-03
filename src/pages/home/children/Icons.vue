@@ -14,19 +14,19 @@ export default {
     return {
       iconList: [{
         id: '001',
-        iconUrl: '../../../../static/音乐_music215.svg',
+        iconUrl: 'static/音乐_music215.svg',
         content: '私人FM'
       }, {
         id: '002',
-        iconUrl: '../../../../static/音乐_music215.svg',
+        iconUrl: 'static/音乐_music215.svg',
         content: '每日推荐'
       }, {
         id: '003',
-        iconUrl: '../../../../static/音乐_music215.svg',
+        iconUrl: 'static/音乐_music215.svg',
         content: '歌单'
       }, {
         id: '004',
-        iconUrl: '../../../../static/音乐_music215.svg',
+        iconUrl: 'static/音乐_music215.svg',
         content: '排行榜'
       }]
     }

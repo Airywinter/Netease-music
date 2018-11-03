@@ -39,12 +39,13 @@ export default {
         margin-bottom: 0.2rem;
         margin-left: 1%;
         width: 32%;
+        height: 3rem;
         .recommand-img {
             width: 100%;
         }
         .recommand-name {
-            font-size: 0.15rem;
-            color: black;
+          font-size: 0.15rem;
+          color: black;
         }
   }
 }

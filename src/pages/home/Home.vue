@@ -1,39 +1,50 @@
 <template>
 <div>
-  <HomeHeader></HomeHeader>
-  <HomeSwiper></HomeSwiper>
+  <Header></Header>
+  <HomeSwiper :banner="banner"></HomeSwiper>
   <HomeIcons></HomeIcons>
   <HomeRecommand :recommandList="recommandList"></HomeRecommand>
 </div>
 </template>
 
 <script>
-import HomeHeader from './components/Header'
-import HomeSwiper from './components/Swiper'
-import HomeIcons from './components/Icons'
-import HomeRecommand from './components/Recommand'
+import Header from '../components/Header'
+import HomeSwiper from './children/Swiper'
+import HomeIcons from './children/Icons'
+import HomeRecommand from './children/Recommand'
 import axios from 'axios'
 export default {
   name: 'Home',
   components: {
-    HomeHeader,
+    Header,
     HomeSwiper,
     HomeIcons,
     HomeRecommand
   },
   data () {
     return {
-      recommandList: ''
+      recommandList: '',
+      banner: ''
     }
   },
   methods: {
-    getHomeInfo () {
-      axios.get('http://localhost:3000/personalized')
-        .then(this.getHomeInfoSucc)
+    getRecommand () {
+      return axios.get('http://localhost:3000/personalized')
     },
-    getHomeInfoSucc (res) {
-      res = res.data
-      this.recommandList = res.result
+    getBanner () {
+      return axios.get('http://localhost:3000/banner')
+    },
+    getHomeInfo () {
+      axios.all([this.getRecommand(), this.getBanner()])
+        .then(axios.spread((res1, res2) => {
+          this.getHomeInfoSucc(res1, res2)
+        }))
+    },
+    getHomeInfoSucc (res1, res2) {
+      res1 = res1.data
+      res2 = res2.data
+      this.recommandList = res1.result
+      this.banner = res2.banners
     }
   },
   mounted () {

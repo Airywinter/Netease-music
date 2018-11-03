@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'Home-Header',
+  name: 'Header',
   data: function () {
     return {
       icon: '\ue64d 音乐/视频/电台/用户'
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../../assets/styles/variables.scss';
+@import '~@/assets/styles/variables.scss';
 .head-wrapper {
   position: fixed;
   z-index: 9999;
